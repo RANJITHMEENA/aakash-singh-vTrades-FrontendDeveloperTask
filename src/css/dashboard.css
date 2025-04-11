@@ -1,0 +1,182 @@
+.dashboard-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1f25 0%, #242c35 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .dashboard-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard-header h2 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .network-badge {
+    background: rgba(103, 58, 183, 0.1);
+    color: #673ab7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 1px solid #673ab7;
+  }
+  
+  .wallet-section {
+    color: #ffffff;
+  }
+  
+  .wallet-info {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .info-item label {
+    color: #a0aec0;
+    font-size: 14px;
+  }
+  
+  .address {
+    font-family: monospace;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .contract-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  
+  .contract-section h3 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .counter-display {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .counter-value {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .counter-value label {
+    color: #a0aec0;
+    font-size: 14px;
+  }
+  
+  .value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #673ab7;
+  }
+  
+  .counter-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .button-connect {
+    background: #673ab7;
+    color: white;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .button-disconnect {
+    background: #ef4444;
+    color: white;
+  }
+  
+  .button-fetch {
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .button-increment {
+    background: #10b981;
+    color: white;
+  }
+  
+  .button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .connect-wallet {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .connect-message {
+    color: #a0aec0;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard-card {
+      padding: 20px;
+    }
+  
+    .counter-actions {
+      flex-direction: column;
+    }
+  
+    .button {
+      width: 100%;
+    }
+  }

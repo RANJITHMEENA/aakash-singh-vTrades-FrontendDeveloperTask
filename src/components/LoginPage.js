@@ -43,6 +43,11 @@ const LoginPage = () => {
 
     }
     else if(formData.email === 'ranjithkumar@workhive.com' && formData.password === 'ranjithkumar@workhive.com'){
+      localStorage.setItem('user', JSON.stringify({
+        email: formData.email,
+        name: 'Ranjith Kumar',
+        photoURL: 'https://via.placeholder.com/150'
+      }));
       navigate(`/dashboard`);
     }
     else{
