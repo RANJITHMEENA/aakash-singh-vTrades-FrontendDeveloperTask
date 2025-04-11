@@ -1,0 +1,34 @@
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-content {
+    background-color: #1a1a2e;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .popup-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .popup-content button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #6a0dad;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
