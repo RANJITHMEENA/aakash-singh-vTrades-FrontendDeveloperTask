@@ -6,9 +6,11 @@ import ValidateOtp from './components/ValidateOtp';
 import CreatePassword from './components/CreatePassword';
 import Dashboard from './components/Dasboard';
 import PrivateRoute from './components/PrivateRoute';
+import { WalletProvider } from '../src/context/WallletContext';
 function App() {
   return (
     <Router>
+      <WalletProvider>
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
@@ -25,6 +27,7 @@ function App() {
         />
    
       </Routes>
+      </WalletProvider>
     </Router>
   );
 }
