@@ -98,9 +98,10 @@ const Dashboard = () => {
             {isConnected && (
               <div className="network-badge">
                 {networkName}
+                
               </div>
             )}
-            <button className="button button-logout" onClick={handleLogout}>
+            <button className="button button-logout" onClick={handleLogout} style={{ marginLeft: '20px' }}>
               Logout
             </button>
           </div>

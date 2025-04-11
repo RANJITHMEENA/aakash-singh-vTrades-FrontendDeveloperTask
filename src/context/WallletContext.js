@@ -6,7 +6,7 @@ const WalletContext = createContext();
 
 export const WalletProvider = ({ children }) => {
   const [walletAddress, setWalletAddress] = useState(localStorage.getItem('walletAddress') || '');
-  const [networkName, setNetworkName] = useState('');
+  const [networkName, setNetworkName] = useState(localStorage.getItem('networkName') || '');
   const [isConnected, setIsConnected] = useState(!!walletAddress);
 
   const connectWallet = async () => {
@@ -20,6 +20,8 @@ export const WalletProvider = ({ children }) => {
         setNetworkName(network.name);
         setIsConnected(true);
         localStorage.setItem('walletAddress', accounts[0]);
+        localStorage.setItem('networkName', network.name);
+
 
         // Listeners
         window.ethereum.on('accountsChanged', (accounts) => {

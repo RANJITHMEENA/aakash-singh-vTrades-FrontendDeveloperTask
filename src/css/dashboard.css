@@ -34,8 +34,8 @@
   
   .network-badge {
     background: rgba(103, 58, 183, 0.1);
-    color: #673ab7;
-    padding: 8px 16px;
+    color: #fff;
+    padding: 9px 16px;
     border-radius: 20px;
     font-size: 14px;
     border: 1px solid #673ab7;
