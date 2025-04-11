@@ -24,7 +24,7 @@ const contractABI = [
   }
 ];
 
-const contractAddress = "0xYourContractAddress";
+const contractAddress = "0xA349C2568E528Edd1645509B6eb2E122D6727F31";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -100,16 +100,16 @@ const Dashboard = () => {
     if (window.ethereum) {
       try {
         setLoading(true);
+  
         const provider = new ethers.BrowserProvider(window.ethereum);
-        const signer = provider.getSigner();
+        const signer = await provider.getSigner();
+  
         const contract = new ethers.Contract(contractAddress, contractABI, signer);
-
-        // Call the incrementCounter function
-        const tx = await contract.incrementCounter();
-        await tx.wait(); // Wait for the transaction to be mined
-
-        // After transaction, fetch updated counter value
-        await fetchCounterValue();
+  
+        const tx = await contract.incrementCounter(); // prompts MetaMask
+        await tx.wait(); // waits for transaction to be mined
+  
+        await fetchCounterValue(); // refresh counter value
         setLoading(false);
       } catch (err) {
         setLoading(false);
@@ -117,6 +117,7 @@ const Dashboard = () => {
       }
     }
   };
+  ;
 
   // Add logout function
   const handleLogout = () => {
