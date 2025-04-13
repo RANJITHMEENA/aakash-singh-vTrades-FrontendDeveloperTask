@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from '../firebase/config';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import GoogleIcon from '../Assets/Google.png';
+import LoginImageContainer from './LoginImageContainer';
 import MicrosoftIcon from '../Assets/Microsoft.png';
 
 const LoginPage = () => {
@@ -82,17 +83,7 @@ const LoginPage = () => {
 
   return (
     <div className="login-container">
-      <div className="login-image">
-        <img src={LoginImage} alt="Team" />
-        <div className="welcome-text">
-          <h1 style={{marginLeft:"2rem"}}>Welcome to WORKHIVE!</h1>
-          <ul>
-            <li>Employee Management: View detailed profiles, track performance, and manage attendance.</li>
-            <li>Performance Insights: Analyze team goals, progress, and achievements.</li>
-            <li>Attendance & Leaves: Track attendance patterns and manage leave requests effortlessly.</li>
-          </ul>
-        </div>
-      </div>
+    <LoginImageContainer />
       <div className="login-form">
         <h2 >Sign In</h2>
         <span className='text-muted'>Manage your workspace seamlessly. Sign in to continue.</span>

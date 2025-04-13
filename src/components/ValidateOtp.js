@@ -4,6 +4,7 @@ import '../css/popup.css';
 import LoginImage from '../Assets/LoginBgImg.png';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import LoginImageContainer from './LoginImageContainer';
 
 const ValidateOTP = () => {
   const [otp, setOtp] = useState(new Array(6).fill(""));
@@ -55,17 +56,7 @@ const ValidateOTP = () => {
 
   return (
     <div className="login-container">
-      <div className="login-image">
-        <img src={LoginImage} alt="Team" />
-        <div className="welcome-text">
-          <h1 style={{marginLeft:"2rem"}}>Welcome to WORKHIVE!</h1>
-          <ul>
-            <li>Employee Management: View detailed profiles, track performance, and manage attendance.</li>
-            <li>Performance Insights: Analyze team goals, progress, and achievements.</li>
-            <li>Attendance & Leaves: Track attendance patterns and manage leave requests effortlessly.</li>
-          </ul>
-        </div>
-      </div>
+      <LoginImageContainer />
       <div className="login-form">
         <h2>Enter OTP</h2>
         <span className='text-muted'>Enter the OTP that we have sent to your email address <br /> {id.split('-')[0]}.</span>

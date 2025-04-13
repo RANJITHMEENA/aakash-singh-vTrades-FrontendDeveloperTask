@@ -4,6 +4,7 @@ import '../css/popup.css';
 import LoginImage from '../Assets/LoginBgImg.png';
 import SuccessIcon from '../Assets/SuccessMail.png';
 import { useNavigate } from 'react-router-dom';
+import LoginImageContainer from './LoginImageContainer';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -48,17 +49,7 @@ const ForgotPassword = () => {
 
   return (
     <div className="login-container">
-      <div className="login-image">
-        <img src={LoginImage} alt="Team" />
-        <div className="welcome-text">
-          <h1 style={{marginLeft:"2rem"}}>Welcome to WORKHIVE!</h1>
-          <ul>
-            <li>Employee Management: View detailed profiles, track performance, and manage attendance.</li>
-            <li>Performance Insights: Analyze team goals, progress, and achievements.</li>
-            <li>Attendance & Leaves: Track attendance patterns and manage leave requests effortlessly.</li>
-          </ul>
-        </div>
-      </div>
+ <LoginImageContainer />
       <div className="login-form">
         <h2>Forgot Your Password?</h2>
         <span className='text-muted'>Don't worry! Enter your email address, and we'll send you a link to reset it.</span>
@@ -85,8 +76,8 @@ const ForgotPassword = () => {
               <span role="img" aria-label="email"><img src={SuccessIcon} alt="Success" /></span>
             </div>
             <h3>Link Sent Successfully!</h3>
-            <p>Check your inbox! We've sent you an email with instructions <br /> to reset your password.</p>
-            <button onClick={handleClosePopup}>Okay</button>
+            <p className='text-muted'>Check your inbox! We've sent you an email with instructions <br /> to reset your password.</p>
+            <button onClick={handleClosePopup} style={{float:"right"}}>Okay</button>
           </div>
         </div>
       )}
